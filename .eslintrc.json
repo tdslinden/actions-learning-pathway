@@ -1,5 +1,12 @@
 {
-  "extends": "next",
+  "extends": [
+    "next",
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "react"
+  ],
   "rules": {
+    "react/prop-types": "off"  // Example of customizing a rule from the plugin
   }
 }
