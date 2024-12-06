@@ -1,0 +1,19 @@
+# name of workflow
+name: hello-world
+# workflow's trigger event
+on: push
+# define a job - what happens when the workflow runs
+jobs:
+  # job name
+  hello-world-job:
+    # runner is a machine that executes the jobs in a workflow - GitHub-hosted or self-hosted
+    # specify VM and version for GitHub-hosted
+    runs-on: ubuntu-latest
+    # step can run a defined script or an action
+    # action is a pre-defined, reusable set of jobs or code that perform specific tasks within a workflow
+    steps:
+        # step name - best practice
+      - name: check out repository code
+        # v3 is the checkout action version - should indicate the version
+        uses: actions/checkout@v3
+      - run: echo "$(cat hello_world.txt)"
