@@ -13,7 +13,8 @@ jobs:
     # action is a pre-defined, reusable set of jobs or code that perform specific tasks within a workflow
     steps:
         # step name - best practice
-      - name: check out repository code
+      - name: Check out repository code
         # v3 is the checkout action version - should indicate the version
         uses: actions/checkout@v3
-      - run: echo "$(cat hello_world.txt)"
+      - name: Say hello world!
+        run: echo "$(cat hello_world.txt)"
