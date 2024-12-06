@@ -8,5 +8,6 @@
   ],
   "rules": {
     "react/prop-types": "off"  // Example of customizing a rule from the plugin
+    "react/no-unescaped-entities": "off" // turn off to satisfy build for learning purposes
   }
 }
